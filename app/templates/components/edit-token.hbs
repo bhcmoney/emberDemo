@@ -1,0 +1,7 @@
+{{#if isEditing}}
+  {{input type="text" value=token enter=(action "doneEditing")}}
+{{else}}
+  <span class="token-label">
+    {{token}}
+  </span><a {{action "removedToken" token}} href="#" class="close" tabindex="-1">×</a>
+{{/if}}

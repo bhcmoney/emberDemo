@@ -1,0 +1,224 @@
+.single-feed {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  margin-bottom: 25px;
+  padding: 15px 0;
+}
+
+.single-feed > .col-lg-2 {
+  width: 12%;
+}
+
+.profile-photo {
+}
+
+.profile-photo img {
+}
+
+.details-feed {
+}
+
+.details-feed ul {
+}
+
+.details-feed ul.full-width-ul li {
+  border-bottom: 1px solid#ddd;
+  clear: both;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.details-feed ul.full-width-ul li:last-child {
+  border-bottom: 0px solid#ddd;
+}
+
+.details-title {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.details-title h4 {
+  font-size: 13px;
+  margin-top: 0;
+}
+
+h3.headline {
+  font-size: 13px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+h3.headline a, .profile-name {
+  font-weight: bold;
+}
+
+.posted-time {
+  color: #7C7E7F;
+  text-align: right;
+}
+
+.posted-time i.fa {
+  margin-right: 5px;
+}
+
+.add-me-btn {
+}
+
+.profile-photo img {
+}
+
+.profile-ph-area {
+  padding-right: 0;
+  width: 8%;
+}
+
+.profile-details {
+}
+
+.profile-details p {
+  color: #66696A;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.profile-details a h3, .pro-name-basic {
+  font-size: 14px;
+  margin-top: 0px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.btn.btn-default {
+  background-image: none;
+  border-color: #238CC8;
+  transition: all 500ms ease 0s;
+  padding: 6px 27px;
+}
+
+.btn.btn-default:hover {
+  background: #238CC8;
+  color: #fff;
+}
+
+.sponsored-details {
+}
+
+.sponsored-details p {
+  line-height: 25px;
+}
+
+.sponsored-details img {
+}
+
+.like-comment {
+}
+
+.like-comment ul {
+}
+
+.like-comment ul li {
+  border-bottom: 0 none !important;
+  clear: unset !important;
+  float: left !important;
+  overflow: unset !important;
+}
+
+.like-comment ul li.comments {
+  cursor: pointer;
+}
+
+.like-comment ul li a {
+  display: inline-block;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.posted-items {
+}
+
+.posted-items p {
+}
+
+.video-link {
+}
+
+.video-link p {
+  text-align: justify;
+}
+
+.video-link > .col-lg-5 {
+  padding-left: 0;
+}
+
+.video-link iframe {
+  border: 0 none;
+  height: 100%;
+  width: 100%;
+}
+
+span.posted-time {
+  display: block;
+  margin-top: 12px;
+}
+
+.comment-box {
+  background: none repeat scroll 0 0 #ddd;
+  padding: 0 10px 10px;
+  width: 100%;
+}
+
+.comment-box textarea {
+  margin-bottom: 10px;
+}
+
+.comment-box [class*="col-"] {
+  padding-left: 0;
+}
+
+.comment-user .full-width-ul > li {
+  width: 100%;
+}
+
+.comment-user h3.headline a {
+  padding: 2px 10px;
+}
+
+.comment-user .profile-details p {
+  margin-top: -2px;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+.floatleft {
+  float: left;
+}
+
+.floatright {
+  float: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input, button {
+  outline: none;
+}
+
+img, a:link, a:focus {
+  outline: none;
+}

@@ -1,0 +1,30 @@
+<div class="topActionBar">
+  <div class="action-dropdown"><span style="margin-top:5px;">All Messages</span></div>
+</div>
+<div class="inbox-list">
+  {{#each model as |message|}}
+    {{#link-to "messages.list.show" message.id class="inbox-item"}}
+      <div class="item-content">
+        <img class="photo" src={{message.pictureUrl}} alt="" width="60">
+        <div class="date">
+          <span class="past">{{format-date message.timestamp}}</span>
+        </div>
+        <div class="msg-content">
+          <p class="participants">
+            <span class="new-miniprofile-container">
+              <strong>
+              {{message.name}}
+              </strong>
+            </span>
+          </p>
+          <p class="headline">{{message.subject}}</p>
+          <div class="note">
+            <p>
+              {{truncate-text message.body max=75}}
+            </p>
+          </div>
+        </div>
+      </div>
+    {{/link-to}}
+  {{/each}}
+</div>

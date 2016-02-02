@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="/assets/connections.css">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Connections</h1>
+    </div>
+    <div class="col-xs-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 content-outer">
+      <div class="list">
+        {{#each model.connections as |connection|}}
+          <div class="list-item">
+            <div class="item-content">
+              <img class="photo" width="60" src={{connection.pictureUrl}} alt={{connection.name}}>
+              <div class="date">
+                <span class="past">{{format-date connection.createdAt}}</span>
+              </div>
+              <div class="msg-content">
+                <p style="margin-bottom: 0;" class="participants">
+                  <strong>
+                    {{connection.name}}
+                  </strong>
+                </p>
+                <p class="headline">{{connection.title}}</p>
+                <p class="address"></p>
+              </div>
+            </div>
+          </div>
+        {{else}}
+          No connections to display
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

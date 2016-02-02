@@ -1,0 +1,29 @@
+{{#if errorMessage}}
+  <div class="alert alert-danger">
+    {{errorMessage}}
+  </div>
+{{/if}}
+
+<div class="form-group">
+  <label for="title">Title</label>
+  {{input id="title" type="text" class="form-control" value=author.title}}
+</div>
+<div class="form-group">
+  <label for="articleContent">Content</label>
+  {{textarea id="articleContent" class="form-control" rows=3 value=author.articleContent}}
+</div>
+<div class="form-group">
+  <label for="imageUrl">Image URL</label>
+  {{input id="imageUrl" type="text" class="form-control" value=author.imageUrl}}
+</div>
+<div class="form-group">
+  <label>Author info</label>
+  {{input type="text" class="form-control" value=firstName placeholder="First name"}}
+  {{input type="text" class="form-control" value=lastName placeholder="Last name"}}
+  {{input type="text" class="form-control" value=pictureUrl placeholder="Picture URL"}}
+</div>
+{{markdown-preview text=articleContent}}
+
+<div class="form-group">
+  <button {{action "submit"}} type="submit" class="btn btn-default">Submit</button>
+</div>

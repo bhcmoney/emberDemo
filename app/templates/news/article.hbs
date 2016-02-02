@@ -1,0 +1,49 @@
+<div class="stream-content">
+  {{#if isEditing}}
+    <div class="article-content">
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input id="title" type="text" class="form-control" value=model.title}}
+      </div>
+      <div class="form-group">
+        <label for="articleContent">Content</label>
+        {{textarea id="articleContent" class="form-control" rows=3 value=model.articleContent}}
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        {{input id="imageUrl" type="text" class="form-control" value=model.imageUrl}}
+      </div>
+
+      <button {{action "save"}}>Save</button><button {{action "cancel"}}>Cancel</button>
+    </div>
+  {{else}}
+    <div class="article-header">
+      <button {{action "edit"}}>Edit</button>
+
+      <div class="article-cover masthead"><img src={{model.imageUrl}} class="cover-image" alt={{model.title}}></div>
+      <div class="source-promo">
+        <a class="image-container" href="" title="">
+          <img src={{model.author.pictureUrl}} class="image"
+               alt="{{model.author.firstName}} {{model.author.lastName}}" width="80" height="80">
+        </a>
+        <div class="content">
+          <h2 class="title">
+            <a class="name" href title rel="author">
+              <span>{{model.author.firstName}} {{model.author.lastName}}</span>
+            </a>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-content">
+      <h1 class="article-title">{{model.title}}</h1>
+      <div class="article-meta">
+        <div class="pub-date">{{format-date model.publishedAt}}</div>
+      </div>
+      <div class="article-body">
+        {{markdown-preview text=model.articleContent}}
+      </div>
+    </div>
+  {{/if}}
+</div>

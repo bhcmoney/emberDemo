@@ -1,0 +1,32 @@
+{{#if errorMessage}}
+  <div class="alert alert-danger">
+    {{errorMessage}}
+  </div>
+{{/if}}
+
+<div class="form-group">
+  <label for="recipient">To</label>
+  {{bootstrap-tokenfield tokens=recipients}}
+  {{ember-tokenfield tokens=recipients}}
+</div>
+<ul>
+  {{#each recipients as |r|}}
+    <li>{{r.value}}</li>
+  {{/each}}
+</ul>
+{{input type="text" value=newRecipient}}
+<button {{action "addAnother"}}>Add</button>
+<div class="form-group">
+  <label for="subject">Subject</label>
+  {{input id="subject" type="text" class="form-control" value=subject}}
+  {{subject}}
+</div>
+<div class="form-group">
+  <label for="body">Message</label>
+  {{textarea id="body" class="form-control" rows=3 value=body}}
+  {{body}}
+</div>
+
+<div class="form-group">
+  <button {{action "submit" recipient body}} type="submit" class="btn btn-default">Submit</button>
+</div>

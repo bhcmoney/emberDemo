@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="/assets/connections.css">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Companies</h1>
+    </div>
+    <div class="col-xs-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 content-outer">
+      <div class="list">
+        {{#each model.companies as |company|}}
+          <div class="list-item">
+            <div class="item-content">
+              <img class="photo" width="60" src={{company.pictureUrl}} alt={{company.name}}>
+              <div class="date">
+                <span class="past">{{format-date company.createdAt}}</span>
+              </div>
+              <div class="msg-content">
+                <p style="margin-bottom: 0;" class="participants">
+                  <strong>
+                    {{company.name}}
+                  </strong>
+                </p>
+                <p class="headline">{{company.followers}}</p>
+                <p class="address"></p>
+              </div>
+            </div>
+          </div>
+        {{else}}
+          No companies to display
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

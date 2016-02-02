@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="/assets/messages.css">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Inbox</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3 col-md-2">
+      {{#link-to "messages.compose" class="btn btn-danger btn-block"}}Compose{{/link-to}}
+      <hr>
+      <ul class="nav nav-pills nav-stacked">
+        {{#bs-link to='messages.list' arg='inbox'}}
+          Inbox
+        {{/bs-link}}
+        {{#bs-link to='messages.list' arg='sent'}}
+          Sent
+        {{/bs-link}}
+        {{#bs-link to='messages.list' arg='archive'}}
+          Archive
+        {{/bs-link}}
+        {{#bs-link to='messages.list' arg='trash'}}
+          Trash
+        {{/bs-link}}
+      </ul>
+    </div>
+    <div class="col-md-7 content-outer">
+      {{outlet}}
+    </div>
+  </div>
+</div>
